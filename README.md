@@ -4,14 +4,14 @@ Este projeto implementa, em **Prolog**, um sistema capaz de determinar se um(a) 
 
 Observação: Nesta aplicação, a distinção entre nacionalidade e cidadania foi abstraída. Assim, ao adquirir a cidadania, a pessoa passa a ser considerada a nova origem da linha de transmissão dessa cidadania para seus descendentes.
 
-## 📜 Regras Simplificadas de Herança de Cidadania
+## Regras Simplificadas de Herança de Cidadania
 
 - **Itália 🇮🇹** → Transmissão sem limite de gerações.
 - **Portugal 🇵🇹** → Transmissão até **netos** de portugueses.
 - **Reino Unido 🇬🇧** → Apenas se um dos pais for cidadão britânico.
 - **Alemanha 🇩🇪** → Transmissão até **netos** de alemães.
 
-## 🗂 Estrutura da Base de Dados
+## Estrutura da Base de Dados
 
 A base de fatos utiliza os seguintes predicados:
 ```
@@ -20,7 +20,8 @@ mae(X, Y).
 cidadania(X, Y).
 ```
 
-A árvore genealógica da base de dados é:
+A árvore genealógica da base de dados está descrita abaixo. 
+Note que a cidadania que uma pessoa já possui está escrita ao seu lado nesse diagrama.
 
 ``` 
  ├── Tomas 🇵🇹 + Madalena 🇵🇹
@@ -64,9 +65,18 @@ A árvore genealógica da base de dados é:
       └── Friedrich 🇩🇪 (casado acima com Diana 🇮🇹)
  ```
 
+Já na imagem, estão destacadas as trilhas de descendência por meio de pontos coloridos.
+Cada cor representa uma cidadania:
+ - Italiana - ponto vermelho;
+ - Alemã - ponto amarelo;
+ - Britânica - ponto azul;
+ - Portuguesa - ponto verde.
+
+Os nomes dos personagens da primeira geração foram idealizados de forma que representassem nomes típicos de cada país de origem.
+
 ![Árvore Genealógica](arvore_genealogica.jpg)
 
-## Exemplos de pesquisa
+## Exemplos de uso
 
 ```
 ?- tem_direito(george, portugal).
