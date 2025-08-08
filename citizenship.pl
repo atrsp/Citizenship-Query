@@ -32,9 +32,9 @@ mae(petra, friedrich).
 
 
 #SEGUNDA GERAÇÃO ----------------------------------------------------------
-# leonor e matteo são pais de ana giulia
-mae(leonor, ana giulia).
-pai(matteo, ana giulia).
+# leonor e matteo são pais de giulia
+mae(leonor, giulia).
+pai(matteo, giulia).
 
 # manuel é pai de catarina
 pai(manuel, catarina).
@@ -57,6 +57,7 @@ pai(harry, lorenzo).
 # ava e otto sao pais da emma
 mae(ava, emma).
 pai(otto, emma).
+
 
 #TERCEIRA GERAÇÃO ----------------------------------------------------------
 # catarina e conrad sao pais do mario
@@ -113,7 +114,3 @@ cidadania(ava, reino unido).
 cidadania(petra, alemanha).
 cidadania(otto, alemanha).
 cidadania(friedrich, alemanha).
-
-?- tem_direito(joao, italia).
-?- tem_direito(joao, Y).
-?- tem_direito(X, Y).
