@@ -9,16 +9,16 @@ avo(X, Y) :- (pai(Z, Y); mae(Z, Y)), (mae(X, Z); pai(X, Z)).
 
 # Avalia se uma pessoa tem direito à cidadania alemã.
     # REGRA: Transmissão de cidadania até netos de alemães.
-tem_direito(X, alemanha) :- (avo(Z, X); pai(Z, X); mae(Z, X)), cidadania(Z, alemanha), \+cidadania(X, alemanha).
+tem_direito(X, alema) :- (avo(Z, X); pai(Z, X); mae(Z, X)), cidadania(Z, alema), \+cidadania(X, alema).
 
 # Avalia se uma pessoa tem direito à cidadania portuguesa.
     # REGRA: Transmissão de cidadania até netos de portugueses.
-tem_direito(X, portugal) :- (avo(Z, X); pai(Z, X); mae(Z, X)), cidadania(Z, portugal), \+cidadania(X, portugal).
+tem_direito(X, portuguesa) :- (avo(Z, X); pai(Z, X); mae(Z, X)), cidadania(Z, portuguesa), \+cidadania(X, portuguesa).
 
 # Avalia se uma pessoa tem direito à cidadania britânica.
     # REGRA: A cidadania deve ser transmitida por um pai ou mãe que é cidadão britânico.
-tem_direito(X, reino_unido) :- (pai(Z,X); mae(Z, X)), cidadania(Z, reino_unido), \+cidadania(X, reino_unido).
+tem_direito(X, britanica) :- (pai(Z,X); mae(Z, X)), cidadania(Z, britanica), \+cidadania(X, britanica).
 
 # Avalia se uma pessoa tem direito à cidadania italiana.
     # REGRA: O direito à cidadania é transmitido sem limite de gerações.
-tem_direito(X, italia) :- descendente(X, Y), cidadania(Y, italia), \+cidadania(X, italia).
+tem_direito(X, italiana) :- descendente(X, Y), cidadania(Y, italiana), \+cidadania(X, italiana).

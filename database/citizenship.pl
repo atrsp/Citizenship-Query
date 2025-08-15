@@ -92,25 +92,25 @@ mae(lola, arthur).
 
 # CIDADANIAS #############################################################
 
-cidadania(madalena, portugal).
-cidadania(tomas, portugal).
-cidadania(santiago, portugal).
-cidadania(manuel, portugal).
-cidadania(leonor, portugal).
-cidadania(martin, portugal).
-cidadania(catarina, portugal).
+cidadania(madalena, portuguesa).
+cidadania(tomas, portuguesa).
+cidadania(santiago, portuguesa).
+cidadania(manuel, portuguesa).
+cidadania(leonor, portuguesa).
+cidadania(martin, portuguesa).
+cidadania(catarina, portuguesa).
 
-cidadania(ana, italia).
-cidadania(vitor, italia).
-cidadania(chiara, italia).
-cidadania(diana, italia).
-cidadania(matteo, italia).
+cidadania(ana, italiana).
+cidadania(vitor, italiana).
+cidadania(chiara, italiana).
+cidadania(diana, italiana).
+cidadania(matteo, italiana).
 
-cidadania(oliver, reino unido).
-cidadania(harry, reino unido).
-cidadania(lila, reino unido).
-cidadania(ava, reino unido).
+cidadania(oliver, britanica).
+cidadania(harry, britanica).
+cidadania(lila, britanica).
+cidadania(ava, britanica).
 
-cidadania(petra, alemanha).
-cidadania(otto, alemanha).
-cidadania(friedrich, alemanha).
+cidadania(petra, alema).
+cidadania(otto, alema).
+cidadania(friedrich, alema).

@@ -53,38 +53,38 @@ mae(lola, arthur).
 
 
 
-cidadania(madalena, portugal).
-cidadania(tomas, portugal).
-cidadania(santiago, portugal).
-cidadania(manuel, portugal).
-cidadania(leonor, portugal).
-cidadania(martin, portugal).
-cidadania(catarina, portugal).
-cidadania(ana, italia).
-cidadania(vitor, italia).
-cidadania(chiara, italia).
-cidadania(diana, italia).
-cidadania(matteo, italia).
-cidadania(oliver, reino_unido).
-cidadania(harry, reino_unido).
-cidadania(lila, reino_unido).
-cidadania(ava, reino_unido).
-cidadania(petra, alemanha).
-cidadania(otto, alemanha).
-cidadania(friedrich, alemanha).
+cidadania(madalena, portuguesa).
+cidadania(tomas, portuguesa).
+cidadania(santiago, portuguesa).
+cidadania(manuel, portuguesa).
+cidadania(leonor, portuguesa).
+cidadania(martin, portuguesa).
+cidadania(catarina, portuguesa).
+cidadania(ana, italiana).
+cidadania(vitor, italiana).
+cidadania(chiara, italiana).
+cidadania(diana, italiana).
+cidadania(matteo, italiana).
+cidadania(oliver, britanica).
+cidadania(harry, britanica).
+cidadania(lila, britanica).
+cidadania(ava, britanica).
+cidadania(petra, alema).
+cidadania(otto, alema).
+cidadania(friedrich, alema).
 
 
 descendente(X, Y) :- (pai(Y, X); mae(Y, X)); (pai(Z, X); mae(Z, X)), descendente(Z, Y).
 
 avo(X, Y) :- (pai(Z, Y); mae(Z, Y)), (mae(X, Z); pai(X, Z)).
 
-tem_direito(X, alemanha) :- (avo(Z, X); pai(Z, X); mae(Z, X)), cidadania(Z, alemanha), \+cidadania(X, alemanha).
+tem_direito(X, alema) :- (avo(Z, X); pai(Z, X); mae(Z, X)), cidadania(Z, alema), \+cidadania(X, alema).
 
 
-tem_direito(X, portugal) :- (avo(Z, X); pai(Z, X); mae(Z, X)), cidadania(Z, portugal), \+cidadania(X, portugal).
+tem_direito(X, portuguesa) :- (avo(Z, X); pai(Z, X); mae(Z, X)), cidadania(Z, portuguesa), \+cidadania(X, portuguesa).
 
 
-tem_direito(X, reino_unido) :- (pai(Z,X); mae(Z, X)), cidadania(Z, reino_unido), \+cidadania(X, reino_unido).
+tem_direito(X, britanica) :- (pai(Z,X); mae(Z, X)), cidadania(Z, britanica), \+cidadania(X, britanica).
 
 
-tem_direito(X, italia) :- descendente(X, Y), cidadania(Y, italia), \+cidadania(X, italia).
+tem_direito(X, italiana) :- descendente(X, Y), cidadania(Y, italiana), \+cidadania(X, italiana).
